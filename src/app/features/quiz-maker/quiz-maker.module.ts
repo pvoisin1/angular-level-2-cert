@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { QuizSelectorComponent } from './quiz-selector/quiz-selector.component';
 import { SharedModule } from 'src/app/shared/shared/shared.module';
 import { QuizDisplayComponent } from './quiz-display/quiz-display.component';
