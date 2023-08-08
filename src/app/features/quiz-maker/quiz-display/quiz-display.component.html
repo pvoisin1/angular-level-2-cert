@@ -1,10 +1,10 @@
 <div *ngFor="let triviaQuestion of triviaQuestions">
-  <p class="question">{{triviaQuestion.question}}</p>
+  <p [innerHTML]="triviaQuestion.question" class="question"></p>
   <div>
-    <button class="button"
+    <button [innerHTML]="answer.value" class="button"
       *ngFor="let answer of triviaQuestion.answers"
       (click)="onAnswerClick(triviaQuestion, answer)"
-      [className]="lookupAnswerButtonClass(triviaQuestion, answer)">{{answer.value}}</button>
+      [className]="lookupAnswerButtonClass(triviaQuestion, answer)"></button>
   </div>
 </div>
 
