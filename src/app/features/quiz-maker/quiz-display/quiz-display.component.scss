@@ -1,0 +1,33 @@
+.default{
+  margin-right:5px;
+}
+
+.question{
+  margin-bottom:10px;
+}
+
+.selected-answer{
+  background-color: green;
+  margin-right:5px;
+}
+
+.wrong-answer-selected{
+  background-color: red;
+  margin-right:5px;
+}
+
+.submit-button{
+  margin-top:10px;
+}
+
+.score-level-1{
+  background-color: red;
+}
+
+.score-level-2{
+  background-color: yellow;
+}
+
+.score-level-3{
+  background-color: green;
+}

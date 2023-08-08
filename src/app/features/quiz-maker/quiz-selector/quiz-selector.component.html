@@ -1,0 +1,12 @@
+<form [formGroup]="form">
+  <select id="categorySelect" formControlName="category">
+    <option [ngValue]="null">Select a category</option>
+    <option *ngFor="let category of triviaCategories" [value]="category.id">{{category.name}}</option>
+  </select>
+  <select id="difficultySelect" formControlName="difficulty">
+    <option [ngValue]="null">Select difficulty</option>
+    <option *ngFor="let level of difficultyLevels" [value]="level">{{level |
+      titlecase}}</option>
+  </select>
+  <button id="createBtn" type="button" (click)="onCreateClick()">Create</button>
+</form>

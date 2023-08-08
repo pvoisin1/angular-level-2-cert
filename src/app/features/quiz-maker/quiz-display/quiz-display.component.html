@@ -1,0 +1,16 @@
+<div *ngFor="let triviaQuestion of triviaQuestions">
+  <p class="question">{{triviaQuestion.question}}</p>
+  <div>
+    <button class="button"
+      *ngFor="let answer of triviaQuestion.answers"
+      (click)="onAnswerClick(triviaQuestion, answer)"
+      [className]="lookupAnswerButtonClass(triviaQuestion, answer)">{{answer.value}}</button>
+  </div>
+</div>
+
+<button class="submit-button" *ngIf="allQuestionsAnswered && !showResults"
+  (click)="onSubmit()">Submit</button>
+
+<div *ngIf="showResults" [ngClass]="lookupResultsClass()">
+  {{'You scored ' + score + ' out of 5'}}
+</div>
